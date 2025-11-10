@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::before{
+            content: "Hello ";
+            color: red;
+        }
+        h1::after{
+            content: " user ";
+            color: red;
+        }
+        h1{
+            color: red;
+        }
+
+        #demo::first-letter{
+            color: red;
+            font-size: 40px;
+        }
+        #demo::first-line{
+           background-color: yellow;
+            font-size: 40px;
+        }
+
+
+        input::placeholder{
+            color: red;
+        }
+
+        p::selection{
+            background-color: yellow;
+            color: red;
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+
+
+    <p id="demo">BLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facere alias provident possimus harum, culpa dicta nostrum aliquam ab id, ipsa porro! Iusto tempore id a excepturi doloribus dolor numquam.</p>
+
+    <input type="text" placeholder="Enter Name">
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sunt suscipit, alias aperiam enim nostrum soluta distinctio ad similique dicta obcaecati, asperiores neque? Ad sunt ipsum laborum voluptatem modi ipsa?</p>
+    
+</body>
+</html>
