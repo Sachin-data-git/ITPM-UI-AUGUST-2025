@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* img:hover{ */
+            /* filter: grayscale(70%); */
+            /* filter: contrast(150%); */
+            /* filter: brightness(80%); */
+            /* filter: drop-shadow(10px 10px 10px red); */
+        /* } */
+
+
+
+
+        .img-box{
+            position: relative;
+        }
+        .img-box::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            background: rgba(151, 20, 20, 0.734); /* Red overlay */
+        }
+        
+
+        #demo1{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            cursor: all-scroll;
+        }
+
+        #demo2{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            cursor:e-resize;
+        }
+    </style>
+</head>
+<body>
+   <div class="img-box">
+     <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"  height="300" width="300">
+   </div>
+
+
+   <div id="demo1"> cursor: all-scroll;</div>
+   <div id="demo2">cursor:e-resize;</div>
+    
+</body>
+</html>
