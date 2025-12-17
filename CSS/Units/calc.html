@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            height: 400px;
+            width: 100%;
+            border: 1px solid red;
+        }
+
+        div{
+            /* width: 100% - 100px; wrong */
+            /* width:calc( 100% - 100px); */
+            width:calc( 50% + 100px);
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+     <section>
+           <div>
+            content
+           </div>
+     </section>
+</body>
+</html>

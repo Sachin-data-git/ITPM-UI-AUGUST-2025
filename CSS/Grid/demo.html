@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            height: 500px;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,170px);
+
+        }
+        div{
+            border: 1px solid green;
+        }
+        
+        #demo1{       /* rs/cs/re/ce */
+            grid-area: 1/1/4/2;
+            background-color: rgb(17, 2, 228);
+        }
+        #demo2{
+                       
+            grid-area: 1/2/2/3;
+            background-color: red;
+        }
+        #demo3{
+            grid-area: 2/2/3/3;
+            background-color: red;
+        }
+        #demo4{
+            grid-area: 3/2/4/3;
+            background-color: red;
+        }
+         #demo5{
+            grid-area: 1/3/4/4;
+            background-color: rgb(74, 240, 8);
+        }
+    </style>
+</head>
+<body>
+       <section>
+        <div id="demo1">1</div>
+        <div id="demo2">2</div>
+        <div id="demo3">3</div>
+        <div id="demo4">4</div>
+        <div id="demo5">5</div>
+       </section>
+</body>
+</html>
