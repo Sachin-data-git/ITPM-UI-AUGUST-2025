@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr=[,,"red","blue","green","yellow","pink","orange","black"];
+        // console.log(arr.length);
+        // console.log(arr);
+        // console.log(arr[2]);
+
+        //array destructing 
+        // let[color1,color5,color45,...restData]=arr;
+        // console.log(color45);  //green
+        // console.log(restData);  
+
+        //spread operators
+        // let arr1 = [1, 2, 3, 4, 5];
+        // let arr2 = [6, 7, 8, 9, 10];
+        // let arr4 = [11, 12];
+
+        // let arr3=[arr1+arr2];
+        // console.log(arr3);
+
+        // let arr3=[arr1 , arr2];
+        // console.log(arr3);
+
+        // let arr3=arr1.concat(arr2,arr4,34);
+        // console.log(arr3[12]);
+
+        //spread operator
+        // let arr3=[...arr1,...arr2,...arr4,"sam"];
+        // console.log(arr3);
+
+        // let arr=[1,20,3,45];
+        // let arr=[4,2,3,1];
+        // console.log(arr.sort((a , b)=> {return (a-b)})) //
+        // console.log(arr.sort((a , b)=> {return (b-a)})) //
+
+
+        // let arr=[1,2,3,4,5,6,7,8,9,10];
+        // let result1=arr.some((n)=>{return n%2==0 })
+        // console.log(result1);
+
+        // let result2=arr.every((n)=>{return n%2==0 })
+        // console.log(result2);
+
+
+        //     let arr = [1, 2, 3, 4];
+        //    let arr1= arr.fill(100, 1, 4);
+        //     console.log(arr);  
+        //     console.log(arr1);  // [1, 0, 0, 4]
+
+
+        // let arr = [5, 12, 8, 130, 44];
+        // let found = arr.find(num => num > 10);
+        // console.log(found);  // 12 
+
+        // let foundfil = arr.filter(num => num > 10);
+        // console.log(foundfil);  // [12,130,44]
+
+//         let arr = [1, 2, 3, 2]; 
+// console.log(arr.indexOf(2));  // 1 
+// console.log(arr.lastIndexOf(2));  // 3
+
+    // let arr2=[1,2,3,4,5];
+    // console.log(arr2.join()); //1,2,3,4,5
+    // console.log(arr2.join("-")); //
+
+
+    let arr=[1,2,3,4,5,65];
+    // let result=arr.reduce((acc,curr)=>{
+    //     return acc+curr;
+    // },10)
+    // console.log(result);
+    let max=arr.reduce((acc,curr)=>{
+        return (acc>curr ? acc : curr);
+    })
+    console.log(max);
+
+    let min=arr.reduce((acc,curr)=>{
+        return (acc<curr ? acc : curr);
+    })
+    console.log(min);
+
+
+    //   TASK
+//     🔹 1. Tasks on every() Method
+// Task 1
+// Given an array of numbers, check whether all numbers are positive.
+// Input:
+// [3, 5, 7, 9]
+
+// Task 2
+// Check if all students have scored more than 40 marks.
+// Input:
+// [45, 67, 80, 41]
+
+// Task 3
+// Given an array of strings, check whether all strings have length greater than 3.
+
+// 🔹 2. Tasks on some() Method
+// Task 1
+// Check whether at least one number is even in the array.
+// Input:
+// [1, 3, 5, 8, 9]
+
+// Task 2
+// Check if any student has failed (marks < 35).
+// Input:
+// [56, 78, 34, 90]
+
+// Task 3
+// Given an array of email IDs, check whether any email contains "@gmail.com".
+
+
+
+
+
+// 🔹 3. Tasks on filter() Method
+// Task 1
+// Filter out even numbers from the given array.
+// Input:
+// [10, 15, 20, 25, 30]
+// Expected Output:
+// [10, 20, 30]
+
+
+// Task 2
+// From an array of ages, return only those eligible to vote (age ≥ 18).
+
+
+// Task 3
+// Given an array of strings, filter all words that start with the letter 'a'.
+
+
+// Task 4
+// Filter all numbers greater than 50 from the array.
+
+
+// 🔹 4. Tasks on find() Method
+// Task 1
+// Find the first number greater than 100 in the array.
+// Input:
+// [45, 90, 120, 150]
+
+// Task 2
+// Find the first even number from the array.
+
+
+// Task 3
+// Given an array of user objects, find the user whose id is 3.
+
+// [
+//   { id: 1, name: "Amit" },
+//   { id: 2, name: "Rahul" },
+//   { id: 3, name: "Neha" }
+// ]
+
+
+// 🔹 5. Tasks on map() Method
+// Task 1
+// Create a new array by doubling each number.
+// Input:
+// [2, 4, 6]
+// Expected Output:
+// [4, 8, 12]
+
+
+
+// 🔹 6. Tasks on reduce() Method
+// Task 1
+// Find the sum of all elements in the array.
+// Input:
+// [5, 10, 15]
+
+// Task 2
+// Find the maximum number in the array using reduce.
+
+
+// Task 3
+// Count the total number of even elements in the array.
+
+
+// Task 4
+// Given an array of prices, calculate the total bill amount.
+// Input:
+// [199, 299, 399]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
