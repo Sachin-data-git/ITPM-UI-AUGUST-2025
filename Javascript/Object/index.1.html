@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //js Object
+        // const obj={
+        //     id:1,
+        //     name:"Demo",
+        //     age:34
+        // }
+        //Accessing 
+        // console.log(obj.id)  //1
+        // console.log(obj.name)  //Demo
+        // console.log(obj.age)  //34
+
+        // console.log(obj);
+
+        // JSON javascript object Notation
+        // js object to json
+        //  let jsonObject=JSON.stringify(obj);
+        //  console.log(jsonObject);
+
+        //  json to js
+        // let jsobject=JSON.parse(jsonObject)
+        // console.log(jsobject)
+
+
+       
+        // Updating:- update,delete,add
+         const obj={
+            id:1,
+            name:"Demo",
+            age:34
+        }
+        //update
+        // obj.name="Ajay";
+        // console.log(obj)
+
+        //add property
+        // obj.email="ajay@gmail.com"
+        // console.log(obj)
+
+        //delete
+        // delete obj.id
+        // console.log(obj)
+
+        // freeze() prevent- updation 
+        // seal() it will update values , prevent-add
+        // console.log(obj)
+        
+        // Object.freeze(obj);
+        // Object.seal(obj);
+
+        // obj.id=2;
+        // console.log(obj);
+
+        // obj.email="s@gmail.com"
+        // console.log(obj);
+
+        // delete obj.age;
+        // console.log(obj)
+
+
+        // console.log(Object.keys(obj));
+        // console.log(Object.values(obj));
+        // console.log(Object.entries(obj));
+
+        // console.log(obj.id)
+        // //Object Destructuring
+        // let{id,...rst}=obj;
+        // console.log(id);
+        // console.log(rst);
+
+        //spread operator
+        // let obj1={
+        //     id:1,
+        //     name:"A"
+        // }
+        // let obj2={
+        //     id1:2,
+        //     name1:"B"
+        // }
+        // let obj3={...obj1,...obj2,email:"demo@"};
+        // console.log(obj3);
+
+        let person={
+            fullname:function(){
+                 return this.fname +" "+ this.lname;
+            }
+        }
+
+        let person1={
+            fname:"Ajay",
+            lname:"Tambe"
+        }
+        let person2={
+            fname:"Aman",
+            lname:"shinde"
+        }
+
+        console.log(person.fullname.call(person1));
+        console.log(person.fullname.call(person2));
+
+
+        let nstobj={
+            id:1,
+            marks:{
+                mar:30,
+                hin:40
+            }
+        }
+        console.log(nstobj.marks.hin)
+
+
+
+
+      
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>
