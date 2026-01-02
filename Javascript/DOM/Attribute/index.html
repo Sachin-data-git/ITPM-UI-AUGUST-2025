@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg" height="300" width="300">
+      <button onclick="changeImg()">Change Image</button>
+      <br><hr>
+      <a href="www.you tube .com" target="_blank">you tube</a>
+      <button onclick="getData()">get url</button>
+      <button onclick="removeData()">remove</button>
+      <button onclick="hasData()">has</button>
+      <script>
+        //change the image after the clicking on button
+
+
+         let img=document.querySelector("img");
+        function changeImg(){
+
+           
+
+            //setAttribute("attrName","attrValue")
+            //getAttribute("attrName")
+            //removeAttribute("attrName")
+            //hasAttribute("attrName")
+
+            img.setAttribute("src","https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg")
+            img.setAttribute("alt","Image Not found")
+            img.setAttribute("title","Car")
+        }
+
+        function getData(){
+         let anchor=document.querySelector("a");
+         let url=anchor.getAttribute("href")
+         alert(url);
+
+        }
+
+        function removeData(){
+             let anchor=document.querySelector("a");
+       anchor.removeAttribute("target")
+        
+        }
+        function hasData(){
+             let anchor=document.querySelector("a");
+              let op=anchor.hasAttribute("target");
+              alert(op);
+        
+        }
+
+
+        // TASK
+        // Task 1: Get Attribute Value
+        // Create an input field with an id and placeholder.
+        //  Write JavaScript to print the placeholder value in console when a button is clicked.
+
+        //  Task 2: Set Attribute
+        //  Create a button.
+        //   On click, add disabled attribute to the button.
+
+        //  Task 3: Remove Attribute
+        //  Create an input field with disabled attribute.
+        //   On button click, remove the disabled attribute.
+
+        //   Task 4: Check Attribute Exists
+        //   Create an input with required attribute.
+        //    Use JavaScript to check if required exists and display result in alert.
+
+        //   Task 5: Change Image Source
+        //   Create an image and two buttons:
+        //   Button 1 → Show Image 1
+        //   Button 2 → Show Image 2
+        //    Change the src attribute dynamically.
+
+        //   Task 6: Toggle Password Visibility
+        //   Create:
+        //   Password input
+        //   Button
+        //   On button click:
+        //   Change type="password" → text
+        //   On next click, revert back
+
+        //   Task 7: Add & Remove Class Attribute
+        //   Create a div box.
+        //    On button click:
+        //   Add class active
+        //   On second click remove it
+        //   (Use setAttribute() & removeAttribute())
+
+        //   Task 8: Disable All Inputs
+        //   Create 5 input fields.
+        //    On button click:
+        //   Add disabled attribute to all inputs
+        //   On another button click, enable all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
+</body>
+</html>

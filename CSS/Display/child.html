@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Properties</title>
+
+    <style>
+
+        section{
+            display: flex;
+            /* flex-wrap: nowrap; */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+
+
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+
+
+
+            height: 500px;
+            width: 100%;
+            border: 1px solid green;
+        }
+        div {
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            /* display: inline-block; */
+        }
+
+
+        /* Child Properties */
+     #item-1{
+        /* align-self:flex-start ; */
+        /* order: 4; */
+        /* flex-grow: 1; */
+
+
+     }
+     #item-2{
+        /* align-self:center ; */
+        /* order: 3; */
+        /* flex-grow: 1; */
+
+
+     }
+     #item-3{
+        /* align-self:flex-end ; */
+        /* order: 0; */
+        /* flex-grow: 1; */
+
+     }
+     #item-4{
+        /* align-self:flex-start ; */
+        /* order: 1; */
+        /* flex-grow: 1; */
+     }
+       
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="item-1" >demo-1</div>
+        <div id="item-2">demo-2</div>
+        <div id="item-3">demo-3</div>
+        <div id="item-4">demo-4</div>
+        <!-- <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div> -->
+    </section>
+
+</body>
+
+</html>

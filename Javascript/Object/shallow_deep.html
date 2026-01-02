@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let original={
+            id:1,
+            name:"demo",
+            Marks:{
+                Hin:20,
+                Mar:30
+            }
+        }
+        // console.log(original.Marks.Hin)
+        //Shallow Copy
+         let shallowcopy=Object.assign({},original);
+        //  console.log(shallowcopy)
+        //  console.log(original)
+        shallowcopy.Marks.Hin=2;
+        // shallowcopy.id=2;
+        console.log(shallowcopy);
+        console.log(original);
+
+        //deep copy
+        let deepcopy=JSON.parse(JSON.stringify(original));
+        deepcopy.Marks.Hin=50;
+        console.log(deepcopy)
+        console.log(original)
+
+
+
+         
+
+    </script>
+</body>
+</html>

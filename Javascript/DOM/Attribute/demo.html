@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+       
+
+        <input type="password" placeholder="Enter Password">
+         <i class="fas fa-eye-slash" onmousedown="showPass()" onmouseup="hidePass()"></i>
+
+     <script>
+        
+        function showPass(){
+             document.querySelector("input").setAttribute("type","text")
+             document.querySelector("i").setAttribute("class","far fa-eye")
+        }
+        function hidePass(){
+             document.querySelector("input").setAttribute("type","password")
+             document.querySelector("i").setAttribute("class","fas fa-eye-slash")
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universal Selector */
+        *{
+            border: 1px solid rgb(31, 238, 13);
+        }
+        /* span{
+            color: red;
+        } */
+
+        /* Descendent Selector */
+        /* div  span{
+            color: red;
+        } */
+
+        /* Child Combinator */
+         /* div > span{
+            color: red;
+        } */
+
+        /* Attribute Selector tagName[attrname="value"] */
+        input[type="text"]{
+            background-color: yellow;
+        }
+
+        a[href="www.e"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p><span>This is span inside div</span></p>
+    </div>
+
+    <div>
+       <span>This is span inside div</span>
+    </div>
+
+
+    <input type="text">
+    <input type="email">
+    <input type="password">
+    <input type="search">
+
+    <a href="ww.com">click</a>
+    <a href="www.in">click1</a>
+    <a href="www.e">click2</a>
+
+   
+</body>
+</html>

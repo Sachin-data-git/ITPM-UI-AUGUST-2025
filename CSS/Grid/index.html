@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            height: 600px;
+            border: 2px solid red;
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px 100px ; */
+            /* grid-template-columns: repeat(2,1fr); */
+            /* grid-template-rows: 100px 100px; */
+            /* column-gap: 10px;
+            row-gap: 10px; */
+            gap:10px;
+
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            /* grid-template-rows: repeat(auto-fit,minmax(300px,1fr)); */
+            grid-template-rows: 100px 100px 100px 100px;
+
+
+
+
+        }
+
+
+        /* @media only screen and (min-width:500px){
+             section{
+                grid-template-columns: 200px 200px;
+             }
+        } */
+        div{
+            /* height: 100px;
+            width: 100px; */
+            border: 1px solid green;
+        }
+        #demo1{
+            /* margin-left: 200px; */
+             background-color: yellow;
+             /* grid-column-start: 2;
+             grid-column-end: 3;
+             grid-row-start: 1;
+             grid-row-end: 4; */
+                      /* rs/cs/re/ce */
+             grid-area:1/2/4/3 ;
+            
+        }
+    </style>
+</head>
+<body>
+        <section>
+            <div id="demo1">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <button onclick="fetchData()">click</button>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+
+      <script>
+        async function fetchData(){
+
+           try{
+             let response=await axios.get("https://jsonplaceholder.typicode.com/posts");
+            console.log(response.data);
+
+            response.data.map((m)=>{
+                if(m.id>50){
+
+                    console.log(m.id)
+                }
+            })
+           }catch(error){
+            console.log(error)
+
+           }
+         }
+      </script>
+</body>
+</html>

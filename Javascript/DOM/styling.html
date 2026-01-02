@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+        .dark{
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, corrupti laborum hic unde ad quisquam ea fuga facere veritatis distinctio quae non sapiente saepe, omnis magnam impedit perspiciatis inventore debitis!</p>
+
+      <button onclick="addClass()">add</button>
+      <button onclick="removeClass()">remove</button>
+      <button onclick="toggleClass()">toggle</button>
+      <button onclick="containsClass()">contains</button>
+
+      <script>
+        // 1)using style property
+        // syntax: element.style.propertyName="propertyValue"
+        let element=document.querySelector("p");
+
+        // let txtcolor=prompt("Enter ColorName")
+        // element.style.color=txtcolor;
+
+        // 2)using setProperty Methods
+        // syntax: element.style.setProperty("propertyName","propertValue")
+        //  element.style.setProperty("color","red");
+
+         //3)using external css via id
+        //  syntax: element.id="idName";
+        //  element.id="demo";
+        //  element.id="";
+
+        // 4)by using class
+        //  syntax:1) element.classList.add("className")
+        //         2) element.classList.remove("className")
+        //         3) element.classList.replace("oldClass","newClass")
+        //         4) element.classList.toggle("className")
+        //         5) element.classList.contains("className")
+
+        function addClass(){
+              element.classList.add("dark");
+        }
+        function removeClass(){
+              element.classList.remove("dark");
+        }
+        function toggleClass(){
+              element.classList.toggle("dark");
+        }
+        function containsClass(){
+             if(element.classList.contains("dark")){
+                console.log("Dark  class is available")
+             }else{
+                console.log("Dark  class is not available")
+             }
+        }
+
+          
+
+
+
+
+      </script>
+</body>
+</html>

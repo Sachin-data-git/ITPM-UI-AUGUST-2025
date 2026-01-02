@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #an1:hover{
+
+            color: red;
+            background-color: yellow;
+            border: 1px solid red;
+            border-radius: 5px;
+
+        }
+        p:hover{
+            color: red;
+        }
+
+        #an2:visited{
+            color: red;
+        }
+        #an3:active{
+            font-size: 30px;
+        }
+        #an4:link{
+            color: pink;
+        }
+
+        #inp1:focus{
+            background-color: blue;
+            color: red;
+        }
+        #inp2:disabled{
+            background-color: red;
+        }
+        #inp3:checked{
+            height: 100px;
+            width: 100px;
+        }
+        #inp4:required{
+            border: 1px solid red;
+        }
+        #inp6:invalid{
+            color: red;
+        }
+        #inp6:valid{
+            color: rgb(32, 224, 7);
+        }
+    </style>
+</head>
+<body>
+    <a href="#####" id="an1">hover</a>
+    <a href="######" id="an2">Visited</a>
+    <a href="##" id="an3">Active</a>
+    <a href="########" id="an4">link</a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae debitis repellat minus alias sequi temporibus inventore numquam rem? Consectetur quaerat recusandae temporibus veniam molestias tenetur ratione vitae facilis nisi!</p>
+
+
+    <form action="">
+        <input type="text" id="inp1">
+        <input type="email" id="inp2" disabled>
+        <input type="checkbox" id="inp3" checked>
+        <input type="tel" id="inp4" required >
+        <input type="url" id="inp5" readonly value="demo" >
+
+        <input type="email" placeholder="Enter Email Adres" id="inp6"> 
+        <input type="submit" name="" id="">
+    </form>
+</body>
+</html>
