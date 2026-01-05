@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ul id="parent">
+           <li>Item-1</li>
+           <li id="second">Item-2</li>
+     </ul>
+
+          <div>
+            <h1>This is Original</h1>
+          </div>
+
+          <section style="border: 1px solid red; margin-bottom: 10px; padding: 10px;">
+               <h4>This is Section h4</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia culpa sunt blanditiis veritatis adipisci? Nesciunt laboriosam quisquam quo veniam quibusdam, placeat ex fugiat rem ratione delectus ipsa vel? Incidunt, hic.</p>
+          </section>
+     <button onclick="addData()">AddData</button>
+     <button onclick="inserBeforesecond()">InsertBefore</button>
+     <button onclick="replace()">Replace</button>
+     <button onclick="removeEl()">Remove</button>
+
+
+     <script>
+
+         
+
+        let parent=document.getElementById("parent");
+        
+        function addData(){
+
+
+              //create Element / tag
+        let li=document.createElement("li");
+        console.log(li);
+
+          let text=prompt("Enter Data")
+        //create Data / Text
+        let content=document.createTextNode(text)
+        console.log(content)
+
+        ////add data in that li
+        li.appendChild(content);
+        console.log(li);
+        //It will Add At End of parent
+
+        parent.appendChild(li);
+    }
+        
+
+    function inserBeforesecond(){
+          //create Element / tag
+        let li=document.createElement("li");
+        console.log(li);
+
+        //create Data / Text
+        let content=document.createTextNode("This is Li")
+        console.log(content)
+
+        ////add data in that li
+        li.appendChild(content);
+        console.log(li);
+
+        let second=document.getElementById("second");
+         parent.insertBefore(li,second)
+    }
+
+
+    function replace(){
+        let h1=document.querySelector("h1");
+    //    h1.textContent="This is Replaced Data"
+
+       let h2=document.createElement("h2");
+       let data=document.createTextNode("This is Replaced Data");
+       h2.appendChild(data);
+    //    console.log(h2)
+
+    let parent=document.querySelector("div");
+    parent.replaceChild(h2,h1)
+
+}
+
+ function removeEl(){
+     let parent=document.querySelector("section");
+     let h4=document.querySelector("h4");
+    //  parent.removeChild(h4)
+     parent.remove();
+ }
+
+
+    // TASK
+    // TASK 1: Create and Append Elements
+    // (createElement, createTextNode, appendChild)
+    // Question:
+    // Create a <div> element with the text "Welcome to DOM Assignment" and append it inside the <body>.
+    //   Requirements:
+    //   Use document.createElement()
+    //   Use document.createTextNode()
+    //   Use appendChild()
+
+
+    //   TASK 2: Create Multiple List Items
+    //   (createElement, createTextNode, appendChild)
+    //   Question:
+    //   Create an unordered list <ul> with 5 <li> items having text:
+    //     Item 1
+    //     Item 2
+    //     Item 3
+    //     Item 4
+    //     Item 5
+    //     Append the list to the page.
+
+    //     TASK 3: Insert Element Before Another
+    //     (insertBefore)
+    //     Given HTML:
+    //     <ul id="menu">
+    //       <li>Home</li>
+    //       <li>About</li>
+    //     </ul>
+    //     Question:
+    //     Insert a new list item "Services" before the "About" item.
+
+    //     TASK 4: Replace an Existing Element
+    //     (replaceChild)
+    //     Given HTML:
+    //     <div id="box">
+    //       <p>Old Paragraph</p>
+    //     </div>
+    //     Question:
+    //     Replace "Old Paragraph" with a new paragraph having text
+    //     "This paragraph has been replaced"
+
+    //     TASK 5: Remove an Element Using remove()
+    //     (remove)
+    //     Given HTML:
+    //     <p id="removeMe">Delete this paragraph</p>
+    //     Question:
+    //     Remove the paragraph from the DOM using the modern method.
+
+    //     TASK 6: Remove Child Element
+    //     (removeChild)
+    //     Given HTML:
+    //     <ul id="list">
+    //       <li>Apple</li>
+    //       <li>Banana</li>
+    //       <li>Mango</li>
+    //     </ul>
+    //     Question:
+    //     Remove the "Banana" list item using removeChild().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>
