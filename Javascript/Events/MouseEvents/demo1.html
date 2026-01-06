@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light{
+            background-color: white;
+            color: black;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla hic magni quod repellat ad tempora iste facere odit ea eveniet consequuntur vel, alias illo. Asperiores expedita ipsam cumque a rem.</p>
+       <button>dark</button>
+
+       <script>
+        let btn=document.querySelector("button");
+
+        btn.addEventListener("click",()=>{
+            let body=document.querySelector("body");
+          
+            //  body.classList.toggle("dark")
+
+            let btnText=btn.textContent;
+            console.log(btnText);
+            if(body.classList.contains("dark")&& (btnText=="light") ){
+                body.classList.add("light");
+                body.classList.remove("dark");
+                btn.textContent="dark"
+                
+            }
+            else{
+                
+                body.classList.add("dark")
+                body.classList.remove("light")
+                btn.textContent="light"
+            }
+        })
+
+
+       </script>
+</body>
+</html>
