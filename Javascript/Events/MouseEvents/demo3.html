@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+        let obj={
+            id:1,
+            name:"Demo"
+        }
+        // let count=0;
+        // window.addEventListener("contextmenu",(event)=>{
+        //          count++;
+        //       alert("Right clicked prevented..."+count);
+
+        //       if(count==3){
+        //         window.close();
+        //       }
+        //         event.preventDefault();
+        // })
+
+        window.addEventListener("mousemove",(event)=>{
+            // console.log("mouse moved...");
+            console.log(event.ctrlKey);
+            console.log(event.shiftKey);
+        })
+     </script>
+</body>
+</html>
