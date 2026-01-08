@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+            display: none;
+        }
+        #btn{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+     <button id="btn">FullScreen</button>
+     <button id="btn1">Exit Fullscreen</button>
+
+     <script>
+          let btn=document.getElementById("btn");
+          let btn1=document.getElementById("btn1");
+
+          btn.addEventListener("dblclick",()=>{
+            document.documentElement.requestFullscreen();
+       btn.style.display="none";
+       btn1.style.display="block";
+    })
+
+    btn1.addEventListener("click",()=>{
+        document.exitFullscreen();
+    })
+
+     </script>
+</body>
+</html>
