@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <ul>
+        <li id="item-1">Item-1</li>
+        <li id="item-2">Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <span>This is Span</span>
+    </ul>
+
+    <button id="btn">add New Element</button>
+
+
+    <script>
+         //add code
+      let btn=document.getElementById("btn");
+      btn.addEventListener("click",()=>{
+        let el=document.createElement("li");
+        let cnt=document.createTextNode("Item-7");
+        el.appendChild(cnt);
+        // console.log(el);
+
+        //append created li element in list
+        let parent=document.querySelector("ul");
+        parent.appendChild(el);
+
+
+        let el1=document.createElement("button");
+        let cnt1=document.createTextNode("Delete");
+        el1.appendChild(cnt1);
+        // console.log(el);
+
+        //append created li element in list
+        parent.appendChild(el1);
+
+
+      })
+
+
+      //Event Delagation
+      let parent=document.querySelector("ul");
+         parent.addEventListener("click",(event)=>{
+            console.log(event.target.tagName);
+            // console.log(event.target.textContent);
+            if(event.target && event.target.tagName=="LI"){
+                event.target.style.color="red";
+            }
+
+         })
+    </script>
+</body>
+</html>

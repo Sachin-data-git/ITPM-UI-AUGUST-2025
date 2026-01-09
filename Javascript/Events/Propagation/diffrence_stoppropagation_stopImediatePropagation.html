@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <button>click</button>
+        </div>
+    </section>
+
+    <script>
+        let btn=document.querySelector("button")
+        let div=document.querySelector("div")
+        let section=document.querySelector("section")
+
+        btn.addEventListener("click",(event)=>{
+            alert("button clicked - 1 ...")
+            //  event.stopPropagation();
+             event.stopImmediatePropagation();
+        })
+
+        btn.addEventListener("click",(event)=>{
+            alert("button clicked -2 ...")
+          
+        })
+
+
+
+        div.addEventListener("click",()=>{
+            alert("div clicked...")
+        })
+
+        section.addEventListener("click",()=>{
+            alert("section clicked...")
+        })
+    </script>
+</body>
+</html>
