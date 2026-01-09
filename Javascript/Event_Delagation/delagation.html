@@ -17,32 +17,49 @@
     </ul>
 
     <button id="btn">add New Element</button>
+    <button id="btn1">add New Element by innerhtml</button>
 
 
     <script>
-         //add code
-      let btn=document.getElementById("btn");
-      btn.addEventListener("click",()=>{
-        let el=document.createElement("li");
-        let cnt=document.createTextNode("Item-7");
-        el.appendChild(cnt);
-        // console.log(el);
+        let btn1=document.getElementById("btn1");
+        //   addd by innnerHTML
+        let count=6
+        btn1.addEventListener("click",()=>{
+                 count++;
+            let el=document.createElement("li");
+            el.innerHTML=`Item ${count} <button>Delete</button>`
+            console.log(el)
+           let parent=document.querySelector("ul");
 
-        //append created li element in list
-        let parent=document.querySelector("ul");
-        parent.appendChild(el);
+            parent.appendChild(el);
+        })
+        
+        
+        
+        
+        //add code
+    //     let btn=document.getElementById("btn");
+    //   btn.addEventListener("click",()=>{
+    //     let el=document.createElement("li");
+    //     let cnt=document.createTextNode("Item-7");
+    //     el.appendChild(cnt);
+    //     // console.log(el);
+
+    //     //append created li element in list
+    //     let parent=document.querySelector("ul");
+    //     parent.appendChild(el);
 
 
-        let el1=document.createElement("button");
-        let cnt1=document.createTextNode("Delete");
-        el1.appendChild(cnt1);
-        // console.log(el);
+    //     let el1=document.createElement("button");
+    //     let cnt1=document.createTextNode("Delete");
+    //     el1.appendChild(cnt1);
+    //     // console.log(el);
 
-        //append created li element in list
-        parent.appendChild(el1);
+    //     //append created li element in list
+    //     parent.appendChild(el1);
 
 
-      })
+    //   })
 
 
       //Event Delagation
@@ -50,8 +67,12 @@
          parent.addEventListener("click",(event)=>{
             console.log(event.target.tagName);
             // console.log(event.target.textContent);
-            if(event.target && event.target.tagName=="LI"){
-                event.target.style.color="red";
+            // if(event.target && event.target.tagName=="LI"){
+            //     event.target.style.color="red";
+            // }
+
+            if(event.target.tagName=="BUTTON"){
+                event.target.parentElement.remove()
             }
 
          })
