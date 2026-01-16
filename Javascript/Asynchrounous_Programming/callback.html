@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //callback Function
+        function fetchData(callback){
+            setTimeout(()=>{
+                console.log("Data Fetched Successfully.....")
+                callback();
+            },3000)
+        }
+
+        function processData(){
+            console.log("Data Processsed...")
+        }
+
+        fetchData(processData);
+       
+     </script>
+</body>
+</html>

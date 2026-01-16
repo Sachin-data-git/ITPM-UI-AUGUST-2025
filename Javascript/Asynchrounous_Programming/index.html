@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+        // let arr=[1,2,3,4,5,6];
+
+        // let filterArr=arr.filter((n)=>{
+        //     return n%2==0
+        // })
+
+        // console.log(filterArr);
+
+        function A(){
+            console.log("A");
+        }
+
+        A();
+
+
+        //Higher Order Function
+        function B(callback){
+            console.log("B");
+            callback();
+        }
+        B(C);
+
+        console.log(x);
+
+
+        //callback Function
+        function C(){
+            console.log("C");
+        }
+
+
+
+        // TASK
+
+        // Task 1: Basic Callback Understanding
+        // Objective: Understand how a function can be passed as an argument.
+        // Problem:
+        // Create a function calculate(a, b, callback)
+        // If callback is add, return sum
+        // If callback is multiply, return product
+        // Expected Concepts:
+        // Function as argument
+        // Reusability
+        // Example Call:
+        // calculate(5, 3, add);
+        // calculate(5, 3, multiply);
+        
+        // Task 2: Callback After Operation
+        // Objective: Execute a callback after completing a task.
+        // Problem:
+        // Create a function downloadFile(callback) that:
+        // Logs "File downloading..."
+        // After 2 seconds, logs "File downloaded"
+        // Calls the callback function
+
+        // Task 3: Callback for Validation
+        // Objective: Use callbacks for decision-making.
+        // Problem:
+        // Create a function validateUser(username, successCallback, errorCallback)
+        // If username length > 5 → call successCallback
+        // Else → call errorCallback
+
+
+        // Task 4: setTimeout Callback
+        // Objective: Understand async behavior.
+        // Problem:
+        // Create a function delayedMessage(message, delay, callback)
+        // Print message after delay
+        // Then execute callback saying "Task completed"
+
+        // Task 5: Nested setTimeout (Callback Hell Introduction)
+        // Objective: Experience callback hell.
+        // Problem:
+        // Print the following messages one after another with 1 second delay:
+        // "Login successful"
+        // "Fetching user profile"
+        // "Fetching user orders"
+        // "Logout successful"
+        // ⚠️ Rule: Use only callbacks and setTimeout.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+       </script>
+</body>
+</html>
