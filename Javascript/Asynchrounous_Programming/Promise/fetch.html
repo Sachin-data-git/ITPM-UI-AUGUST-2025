@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="executeTask()">fetch</button>
+      <script>
+
+        function fetchData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Data Fetched...");
+                    resolve()
+                },1000)
+            })
+        }
+        function processData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                      console.log("Data processed...")
+                    resolve()
+                },1000)
+            })
+        }
+        function saveData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Data saved...")
+                    resolve()
+                },1000)
+            })
+        }
+
+        // fetchData().then(processData).then(saveData).then(()=>{
+        //    setTimeout(()=>{
+        //      console.log("all Task Completed...")
+        //    },1000)
+        // }).catch(()=>{
+        //     console.log("Error")
+        // })
+
+        //async And await
+       async function executeTask(){
+           await fetchData();
+           await processData();
+           await saveData();
+        }
+
+
+
+      </script>
+</body>
+</html>

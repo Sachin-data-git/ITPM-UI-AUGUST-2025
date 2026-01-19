@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+             function order(){
+                 return new Promise((resolve,reject)=>{
+                    console.log("order is in process....");
+
+                    let restaurentopen=false;
+                    setTimeout(()=>{
+                           if(restaurentopen){
+                             resolve("Order Confirmed...")
+                           }
+                           else{
+                            reject("Order Cancelled...")
+                           }
+                    },3000)
+                 })
+                }
+
+                order().then((result)=>{
+                    console.log(result);
+                }).catch((error)=>{
+                    console.log(error);
+                })
+
+
+                // TASK
+                // Task 1: Create a Basic Promise
+                // Objective: Understand promise creation and .then() / .catch()
+                // 👉 Create a function checkInternet() that:
+                // Resolves with "Internet Connected" after 2 seconds
+                // Rejects with "No Internet" if a boolean flag is false
+                // Rules:
+                // Use setTimeout
+                // Handle success and error using .then() and .catch()
+                
+                
+                // Task 2: Promise Chaining (Real-time Example)
+                // Scenario: Online Food Order 🍔
+                // 👉 Implement these steps using promise chaining:
+                // placeOrder() → "Order Placed"
+                // prepareFood() → "Food Prepared"
+                // deliverFood() → "Food Delivered"
+                // Each step should:
+                // Resolve after 1 second
+                // Pass data to the next .then()
+                // Restriction:
+                // ❌ Do NOT use async/await
+                
+                // Task 3: Convert Promise Chain to Async/Await
+                // 👉 Convert Task 2 into async/await
+                
+                
+                // Task 4: Delay Function
+                // 👉 Create a reusable function delay(ms) that:
+                // Returns a promise
+                // Resolves after ms
+                // Use it with async/await to print:
+                // Step 1
+                // (wait 1 sec)
+                // Step 2
+                // (wait 2 sec)
+                // Step 3
+                
+                // Task 5: Promise.all()
+                // Scenario: Fetch user data
+                // 👉 Create 3 promises:
+                // getUser()
+                // getOrders()
+                // getPayments()
+                // All resolve after different times.
+                // Requirements:
+                // Use Promise.all()
+                // Print all results together
+                // Explain: What happens if one promise fails?
+                
+                // Task 6: Promise.allSettled()
+                // 👉 Modify Task 5:
+                // Make one promise reject
+                // Use Promise.allSettled()
+                // Print status + value/reason
+                
+                
+                // Task 7: Promise.race()
+                // Scenario: Server Response ⏱️
+                // 👉 Create 3 promises:
+                // Server A → 3s
+                // Server B → 2s
+                // Server C → 1s
+                // Use Promise.race() to:
+                // Print the fastest response
+                
+                // Task 8: Promise.any()
+                // 👉 Same as Task 7 but:
+                // One promise rejects
+                // One resolves
+                // Use Promise.any()
+                // Question:
+                // 👉 What happens if all promises reject?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>

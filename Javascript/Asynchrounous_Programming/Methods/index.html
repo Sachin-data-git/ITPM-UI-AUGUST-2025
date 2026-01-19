@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+        // let p1=Promise.resolve("p1");
+        // let p2=Promise.reject("p2");
+        // let p3=Promise.resolve("p3");
+
+
+        //all  it will execute promise parallaly
+        // Promise.all([p1,p2,p3]).then((n)=>{
+        //     console.log(n);
+        // }).catch((err)=>{
+        //     console.error(err);
+        // })
+
+        //allSettled  it will execute promise parallaly but never fails
+        // Promise.allSettled([p1,p2,p3]).then((n)=>{
+        //     console.log(n);
+        // }).catch((err)=>{
+        //     console.error(err);
+        // })
+
+        //race  it returns the first promise that is finished...(resolve or  reject)
+
+        let s1=new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("First Promise..")
+            },300)
+        })
+        let s2=new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("second Promise..")
+            },500)
+        })
+        let s3=new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("third Promise..")
+            },2000)
+        })
+        let s4=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                reject("fourth Promise..")
+            },100)
+        })
+
+        // Promise.race([s1,s2,s3,s4]).then((result)=>{
+        //     console.log(result)
+        // }).catch((err)=>{
+        //     console.log(err);
+        // })
+
+
+        // any  return the successfull promise only
+         Promise.any([s1,s2,s3,s4]).then((result)=>{
+            console.log(result)
+        }).catch((err)=>{
+            console.log(err);
+        })
+
+
+
+       </script>
+</body>
+</html>
