@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.2/rxjs.umd.min.js" integrity="sha512-9rY+ul/tDd5uFmYIG3Wf6sTYh44qwK7ZUcAejPR1RzZ4I09ubJBeOoMvLtIUjXWN5ZfR8WgZx9gwnZhMQ0ve9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module">
+
+        const{Observable}=rxjs;
+
+               
+              
+        let trackOrder=new Observable(observer=>{
+            console.log("order Confirmed...");
+
+
+            setTimeout(()=>{observer.next("Food being Preapared.....")},1000);
+            setTimeout(()=>{
+                let dbavailable=true;
+                if(dbavailable){
+                     observer.next("Out for delivery...")
+                }
+                else{
+                    observer.error("Delivery boy not available...")
+                }
+            },2000);
+
+            setTimeout(() => {
+                  observer.next("Order Successfully...")
+            }, 3000);
+
+            setTimeout(()=>{observer.complete()},4000)
+        })
+
+        trackOrder.subscribe({
+            next: data=>{console.log(data)},
+            error: err=>{console.log(err)},
+            complete:()=>{console.log("Order Completed...")}
+        })
+
+
+
+
+
+
+
+            
+    </script>
+</body>
+</html>

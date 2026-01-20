@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <img src="" alt="" height="200" width="200">
+    <button onclick="fetchData()">fetch Movies Data</button>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+       async function fetchData() {
+            const options = {
+                method: 'GET',
+                url: 'https://imdb-top-100-movies.p.rapidapi.com/',
+                headers: {
+                    'x-rapidapi-key': '4876bfe787mshde69d0b5ecaadfep1ec372jsnf90842f5c188',
+                    'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
+                }
+            };
+
+            try {
+                // const response = await axios.request(options);
+                // const response= await axios.get('https://imdb-top-100-movies.p.rapidapi.com/') 
+                console.log(response.data);
+
+                response.data.map((item)=>{
+                   imgurl=item.big_image;
+                   console.log(imgurl);
+
+                   document.querySelector("img").setAttribute("src",imgurl)
+                })
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+
+</html>

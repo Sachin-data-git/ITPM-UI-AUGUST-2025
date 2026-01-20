@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p></p>
+      <button onclick="fetchData()">FetchData</button>
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+      <script>
+
+       async function fetchData(){
+              let obj={
+                url:"https://jsonplaceholder.typicode.com/posts",
+                method:"GET"
+              }
+
+            try{
+                   
+             let response=await axios.request(obj);
+            //  console.log(response);
+             console.log(response.data);
+
+            // response.data.map((n)=>{
+            //      console.log(n.id);
+            // })
+
+           let newfilterData= response.data.filter((m)=>{
+                return  m.id %2==0
+            })
+
+            console.log(newfilterData)
+
+            }
+            catch(error){
+                console.log(error);
+            }
+
+        }
+      </script>
+</body>
+</html>
