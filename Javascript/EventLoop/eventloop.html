@@ -5,12 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: rgb(111, 84, 84);
+            color: rgb(0, 0, 0);
+        }
+    </style>
 </head>
 
 <body>
 
     <button>Dark</button>
     <script>
+            let body=document.querySelector("body");
+           document.querySelector("button").addEventListener("click",()=>{
+                if(body.classList.contains("dark")){
+                  body.classList.add("light")
+                }
+                else{
+                     body.classList.add("dark")
+                }
+
+           })
+
+
         // function A(){
         //     console.log("A")
         // }
