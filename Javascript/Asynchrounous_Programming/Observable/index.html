@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button id="btn1">order food</button>
+    <button id="btn2">cancel Order</button>
     
 
 
@@ -15,13 +18,15 @@
 
         const{Observable}=rxjs;
 
+
+        let cancelOrder
                
-              
-        let trackOrder=new Observable(observer=>{
+          document.getElementById("btn1").addEventListener("click",()=>{
+            let trackOrder=new Observable(observer=>{
             console.log("order Confirmed...");
 
 
-            setTimeout(()=>{observer.next("Food being Preapared.....")},1000);
+            setTimeout(()=>{observer.next("Food being Preapared.....")},2000);
             setTimeout(()=>{
                 let dbavailable=true;
                 if(dbavailable){
@@ -30,20 +35,36 @@
                 else{
                     observer.error("Delivery boy not available...")
                 }
-            },2000);
+            },3000);
 
             setTimeout(() => {
                   observer.next("Order Successfully...")
-            }, 3000);
+            }, 4000);
 
             setTimeout(()=>{observer.complete()},4000)
         })
 
-        trackOrder.subscribe({
+
+
+        cancelOrder= trackOrder.subscribe({
             next: data=>{console.log(data)},
             error: err=>{console.log(err)},
             complete:()=>{console.log("Order Completed...")}
         })
+
+          })    
+               
+        
+           
+
+        //need to check
+          
+      document.getElementById("btn2").addEventListener("click",()=>{
+         setTimeout(()=>{
+               cancelOrder.unsubscribe();
+               console.log("Order Cancel......")
+        },1000)
+      })
 
 
 
